@@ -38,7 +38,7 @@
 			<h3>{{title}}</h3>
 			<div class="pwd_strength_bar pwd_strength_{{strength_class}}">
 			</div>
-			<span>Use at least 8 characters with at least 1 non-alphabete character. Don’t use a password from another site, or something too obvious like your pet's name.</span>
+			<span>Use at least 8 characters with at least 1 non-alphabete character. Don't use a password from another site, or something too obvious like your pet's name.</span>
 		</div>
 	</body>
 </html>
