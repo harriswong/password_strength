@@ -1,6 +1,5 @@
 var PasswordStrength = PasswordStrength || {};
-(function () {
-    var PwdStr = {};
+(function (PwdStr) {
     //defaults
     PwdStr.defaults = {
         "template_views": {
@@ -77,5 +76,4 @@ var PasswordStrength = PasswordStrength || {};
             console.log(output);
         });
     }
-    PasswordStrength = PwdStr;
 })(PasswordStrength)
