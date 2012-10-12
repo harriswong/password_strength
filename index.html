@@ -1,10 +1,9 @@
 <html>
     <head>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="mustache.js"></script>
         <script type="text/javascript" src="PasswordStrength.js"></script>
         <style type="text/css">
-            #pwd_strength_container {
+            #pwd_strength_container, #pwd_strength_template_holder {
                 width: 300px;
             }
             .pwd_strength_bar {
@@ -35,10 +34,9 @@
             <div id="pwd_strength_container"></div>
         </div>
         <div id="pwd_strength_template_holder" style="display: none;">
-            <h3>{{title}}</h3>
-            <div class="pwd_strength_bar pwd_strength_{{strength_class}}">
-        </div>
-        <span>Use at least 8 characters with at least 1 non-alphabete character. Don't use a password from another site, or something too obvious like your pet's name.</span>
+            <h3></h3>
+            <div id="pwd_strength_bar" class="pwd_strength_bar"></div>
+            <span>Use at least 8 characters with at least 1 non-alphabete character. Don't use a password from another site, or something too obvious like your pet's name.</span>
         </div>
     </body>
 </html>

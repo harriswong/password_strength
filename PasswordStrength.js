@@ -68,12 +68,16 @@ var PasswordStrength = PasswordStrength || {};
     PwdStr.init = function (config) {
         //TODO: merge config
         config = config || PasswordStrength.defaults;
-        var template = $(config.template_holder).html();
+        var template = $(config.template_holder);
+        
         $(config.pwd_input).bind('keyup', function(e) {
+            template.show();
             var result = PasswordStrength.checkStrength($(config.pwd_input).val());
-            var output = Mustache.render(template, config.template_views.strength[result]);
-            $(config.container).html(output);
-            console.log(output);
+            var strengthBar = $('#pwd_strength_bar');
+            strengthBar.removeClass();
+            strengthBar.addClass('pwd_strength_bar pwd_strength_' + config.template_views.strength[result].strength_class);
+            $('h3', template).html(config.template_views.strength[result].title);
+            console.log(result);
         });
     }
 })(PasswordStrength)
